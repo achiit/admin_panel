@@ -1,3 +1,4 @@
+import 'package:admin_panel/constants/style.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -17,17 +18,17 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "Dash",
       theme: ThemeData(
-        scaffoldBackgroundColor: Colors.white,
+        scaffoldBackgroundColor: dark,
         textTheme: GoogleFonts.mulishTextTheme(
           Theme.of(context).textTheme
         ).apply(
-          bodyColor: Colors.black
+          bodyColor: lightGrey
         ),
         pageTransitionsTheme: PageTransitionsTheme(builders:{
           TargetPlatform.iOS: FadeUpwardsPageTransitionsBuilder(),
           TargetPlatform.android: FadeUpwardsPageTransitionsBuilder()
         }),
-        primaryColor: Colors.blue,
+        primaryColor: lightGrey,
       ),
       home: SiteLayout(),
     );
