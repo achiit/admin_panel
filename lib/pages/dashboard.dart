@@ -11,6 +11,7 @@ import 'component/chart.dart';
 import 'component/color_representatoin.dart';
 import 'component/line_chart.dart';
 import 'component/line_titles.dart';
+import 'component/third_row.dart';
 import 'component/topmenu.dart';
 
 class DashboardScreen extends StatelessWidget {
@@ -79,9 +80,10 @@ class DashboardScreen extends StatelessWidget {
                           height: 15,
                         ),
                         Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Padding(
-                              padding: const EdgeInsets.only(left:25.0),
+                              padding: const EdgeInsets.only(left: 25.0),
                               child: Text(
                                 'Reports',
                                 textAlign: TextAlign.start,
@@ -92,9 +94,14 @@ class DashboardScreen extends StatelessWidget {
                                   fontWeight: FontWeight.w500,
                                 ),
                               ),
-                              
                             ),
-                            IconButton(onPressed: (){}, icon: Image.asset("assets/icons/three_dot.png"))
+                            ElevatedButton.icon(
+                              style: TextButton.styleFrom(
+                                  elevation: 0, backgroundColor: lightGrey),
+                              onPressed: () {},
+                              icon: Image.asset("assets/icons/three_dot.png"),
+                              label: Text(""),
+                            )
                           ],
                         ),
                         Container(
@@ -167,7 +174,13 @@ class DashboardScreen extends StatelessWidget {
                   ),
                 ),
               ],
-            )
+            ),
+            //third row
+            SizedBox(
+              height: 30,
+            ),
+            thirdrow(),
+
           ],
         ),
       ),
@@ -190,3 +203,4 @@ class DashboardScreen extends StatelessWidget {
         color: Colors.pink, value: 17, showTitle: false, radius: 20),
   ];
 }
+
